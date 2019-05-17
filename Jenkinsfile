@@ -1,9 +1,17 @@
 pipeline {
   agent any
   stages {
-    stage('stage1') {
+    stage('git') {
       steps {
-        git(branch: 'master', url: 'https://github.com/AndresFelipeRG/openui5-sample-app')
+        git(url: 'https://github.com/AndresFelipeRG/openui5-sample-app', branch: 'master')
+      }
+    }
+    stage('npm') {
+      steps {
+        nodejs('nodev') {
+          sh 'npm -v'
+        }
+
       }
     }
   }
