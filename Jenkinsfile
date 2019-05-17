@@ -12,6 +12,7 @@ pipeline {
           sh 'npm -v'
         }
 
+        nodejs(configId: 'npm-config', nodeJSInstallationName: 'Node')
       }
     }
   }
