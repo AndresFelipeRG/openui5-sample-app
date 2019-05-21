@@ -13,7 +13,7 @@ module.exports = function(config) {
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
     reporters: ["progress"],
 
-    browsers: ["ChromeHeadless","Chrome_without_security"],
+    browsers: ["Chrome_without_security"],
 
     customLaunchers: {
       Chrome_without_security: {
